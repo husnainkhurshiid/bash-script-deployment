@@ -1,0 +1,22 @@
+name: Auto Deployment
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Deployment Script
+        run: |
+          chmod +x .github/workflows/autmate.bash  # Make the script executable
+          ./.github/workflows/autmate.bash  # Execute the script
