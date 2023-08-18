@@ -18,5 +18,5 @@ jobs:
 
       - name: Run Deployment Script
         run: |
-          chmod +x .github/workflows/autmate.bash  # Make the script executable
-          ./.github/workflows/autmate.bash  # Execute the script
+          chmod +x .github/workflows/automate.bash  # Make the script executable
+          ./.github/workflows/automate.bash  # Execute the script
